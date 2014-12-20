@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20141219220906) do
 
-  create_table "templates", force: true do |t|
+  create_table "templates", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
     t.string   "name",       limit: 255
     t.text     "content",    limit: 65535
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20141219220906) do
     t.datetime "updated_at",               null: false
   end
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
     t.string   "encrypted_password",     limit: 255, default: "", null: false
     t.string   "reset_password_token",   limit: 255
