@@ -1,0 +1,12 @@
+@import "../global/base";
+
+@include block(site-hero) {
+  padding: 50px 75px;
+  background-color: $blue;
+  color: $white;
+  min-height: 700px;
+
+  @include element(container) {
+    @include outer-container;
+  }
+}

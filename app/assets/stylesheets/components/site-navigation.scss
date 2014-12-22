@@ -1,0 +1,32 @@
+@import "../global/base";
+
+@include block(site-navigation) {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  @include element(item) {
+    float: left;
+    a {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 5px 17px;
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+        color: rgba($white, .8);
+      }
+    }
+  }
+
+  @include element(spacer) {
+    position: relative;
+    top: -4px;
+    float: left;
+    display: block;
+    height: 30px;
+    width: 1px;
+    margin: 0 20px;
+    background-color: rgba($white, .5);
+  }
+}

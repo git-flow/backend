@@ -1,0 +1,12 @@
+@import "../global/base";
+
+@include block(site-header) {
+  @include clearfix;
+
+  @include element(left) {
+    float: left;
+  }
+  @include element(right) {
+    float: right;
+  }
+}

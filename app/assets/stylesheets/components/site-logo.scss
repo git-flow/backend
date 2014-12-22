@@ -1,0 +1,29 @@
+@import "../global/base";
+
+@include block(site-logo) {
+  color: white;
+
+  @include element(primary-name) {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  @include element(secondary-name) {
+    color: rgba($white, .5);
+    font-size: 24px;
+    font-weight: normal;
+  }
+
+  @include element(beta-badge) {
+    position: relative;
+    top: -12px;
+    font-size: 8px;
+    text-transform: uppercase;
+
+    @include clearfix;
+  }
+
+  @include element(slogan) {
+    color: rgba($white, .8);
+  }
+}
