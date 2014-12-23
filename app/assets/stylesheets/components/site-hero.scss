@@ -80,6 +80,11 @@
       background-color: $positive;
       color: white;
     }
+    @include element(promise) {
+      display: inline-block;
+      font-size: .8em;
+      padding-top: 10px;
+    }
   }
 
   @include media($tablet) {
