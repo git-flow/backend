@@ -1,5 +1,9 @@
+@import "config/colors";
+@import "config/neat";
+
 @import "bourbon";
 @import "neat";
 @import "bem";
+@import "retina-image";
 
-@import "../config/colors";
+@import 'config/media';

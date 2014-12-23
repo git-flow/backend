@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141219220906) do
+ActiveRecord::Schema.define(version: 20141222222852) do
 
   create_table "templates", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
@@ -38,5 +38,12 @@ ActiveRecord::Schema.define(version: 20141219220906) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "waiting_list_entries", force: :cascade do |t|
+    t.string   "email",      limit: 255
+    t.boolean  "status",     limit: 1
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
 end

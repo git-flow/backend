@@ -1,12 +1,97 @@
-@import "../global/base";
+@import "global/base";
 
 @include block(site-hero) {
-  padding: 50px 75px;
-  background-color: $blue;
-  color: $white;
   min-height: 700px;
+  padding: 50px 75px;
+
+  color: $white;
+  background: $blue url(image_path('site/bg-pattern.png'));
+  @include retina-image(image_path('site/bg-pattern@2x.png'), 899px 394px);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+
+  @include clearfix;
 
   @include element(container) {
     @include outer-container;
+  }
+
+  @include element(browser) {
+    @include span-columns(7);
+
+    margin-top: 40px;
+
+    // because there is some shadow in the image, we
+    // want it to be aligned a bit more to the left.
+    position: relative;
+    left: -15px;
+
+    min-height: 500px;
+
+    background: url(image_path('site/browser.png')) no-repeat;
+    background-position: center;
+    background-size: contain;
+    @include retina-image(image_path('site/browser@2x.png'));
+
+  }
+
+  @include element(lead) {
+    @include span-columns(5);
+    margin-top: 90px;
+    padding-left: 0;
+
+    h1 {
+      font-size: 2.1em;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-top: 0;
+      font-size: 1.4em;
+    }
+  }
+
+  @include element(form) {
+    margin-top: 100px;
+
+    @include media($tablet) {
+      margin-top: 50px;
+    }
+
+    @include element(input) {
+      border-radius: 4px;
+      font-size: 1.3em;
+      outline: none;
+      border: none;
+      padding: 12px 24px;
+      background-color: $blue-dark;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, .1) inset;
+      width: 250px;
+
+      @include placeholder {
+        color: rgba($white, .7);
+      }
+    }
+    @include element(submit) {
+      $border-width: 2px;
+      border-radius: 4px;
+      font-size: 1.3em;
+      padding: (12px - $border-width) 24px;
+      border: $border-width solid darken($positive, 12%);
+      background-color: $positive;
+      color: white;
+    }
+  }
+
+  @include media($tablet) {
+    @include element(browser) {
+      @include span-columns(5);
+      margin-top: 0;
+    }
+    @include element(lead) {
+      p {
+        font-size: 1.2em;
+      }
+      @include span-columns(7);
+    }
   }
 }
