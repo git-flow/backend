@@ -1,8 +1,8 @@
 <ul class="site-navigation">
-  <li class="site-navigation__item"><a href="#features">Features</a></li>
-  <li class="site-navigation__item"><a href="#how-it-works">How it works</a></li>
+  <li class="site-navigation__item"><a href="#features"><%= t('site.nav.features') %></a></li>
+  <li class="site-navigation__item"><a href="#how-it-works"><%= t('site.nav.how_it_works') %></a></li>
 
   <li class="site-navigation__spacer"></li>
 
-  <li class="site-navigation__item"><a href="/login">Sign in</a></li>
+  <li class="site-navigation__item"><a href="<%= new_user_session_path %>"><%= t('site.nav.sign_in') %></a></li>
 </ul>

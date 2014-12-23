@@ -2,12 +2,12 @@ module MetatagsHelper
   def default_meta_tags
     {
       reverse:     true,
-      site:        'Git-Flow for GitHub',
-      description: 'Git-Flow is a well-thought-out workflow that enables developers to work together in a streamlined way. Git-Flow for GitHub integrates it into GitHub.',
-      keywords:    'git-flow,gitflow,flow,git,github,workflow',
+      site:        t('site.name'),
+      description: t('site.description'),
+      keywords:    t('site.keywords'),
       separator:   '&mdash;'.html_safe,
       og:          {
-        title: 'Git-Flow for GitHub'
+        title: t('site.name')
       }
     }
   end

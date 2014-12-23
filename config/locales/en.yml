@@ -21,3 +21,26 @@
 
 en:
   hello: "Hello world"
+  site:
+    name: "Git-Flow for GitHub"
+    description: "Git-Flow is a well-thought-out workflow that enables developers to work together in a streamlined way. Git-Flow for GitHub integrates it into GitHub."
+    keywords: "git-flow,gitflow,flow,git,github,workflow"
+    nav:
+      features: "Features"
+      how_it_works: "How it works"
+      sign_in: "Sign in"
+    logo:
+      primary: "Git-Flow"
+      secondary: "for GitHub"
+      beta: "Beta"
+      slogan: "Available for Chrome and Safari."
+  hero:
+    title: "Use Git-Flow with GitHub."
+    lead: "We love Git-Flow. It enables you to work in a well-thought-out workflow that just works. Except that GitHub has no support for it. But that changes now."
+    form:
+      title: "Get early access, join the waiting list:"
+      enter_your_email: "Enter your email"
+      request_invite: "Request invite"
+  page:
+    index:
+      title: "Integrating Git-Flow into GitHub"

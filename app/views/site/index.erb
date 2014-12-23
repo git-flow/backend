@@ -1,4 +1,4 @@
-<% title('Integrating Git-Flow into GitHub') %>
+<% title(t('page.index.title')) %>
 <% set_meta_tags(reverse: false) %>
 <div class="site-hero">
   <div class="site-hero__container">
@@ -9,14 +9,14 @@
     </div>
 
     <div class="site-hero__lead">
-      <h1>Use Git-Flow with GitHub.</h1>
-      <p>We love Git-Flow. It enables you to work in a well-thought-out workflow that just works. Except that GitHub has no support for it. But that changes now.</p>
+      <h1><%= t('hero.title') %></h1>
+      <p><%= t('hero.lead') %></p>
 
       <div class="site-hero__form">
-        <h2>Get early access, join the waiting list:</h2>
+        <h2><%= t('hero.form.title') %></h2>
         <%= form_tag request_invite_path, method: :post do %>
-          <%= email_field :invitation, :email, class: 'site-hero__form__input', placeholder: 'Enter your email' %>
-          <%= button_tag 'Request invite', type: :submit, class: 'site-hero__form__submit' %>
+          <%= email_field :invitation, :email, class: 'site-hero__form__input', placeholder: t('hero.form.enter_your_email') %>
+          <%= button_tag t('hero.form.request_invite'), type: :submit, class: 'site-hero__form__submit' %>
         <% end %>
       </div>
     </div>
