@@ -14,6 +14,7 @@ gem 'neat'
 
 gem 'therubyracer', platforms: :ruby
 gem 'devise', '~> 3.4.1'
+gem 'github_api', '~> 0.12.2'
 gem 'meta-tags', '~> 2.0.0'
 
 gem 'jbuilder', '~> 2.0'
