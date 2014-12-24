@@ -5,3 +5,13 @@ html, body {
   color: $black;
   font-size: 16px;
 }
+
+a {
+  color: $blue;
+  text-decoration: none;
+  @include transition(color .2s ease);
+
+  &:hover {
+    color: lighten($blue, 10%);
+  }
+}
