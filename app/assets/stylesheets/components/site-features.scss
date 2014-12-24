@@ -2,6 +2,9 @@
 
 @include block(site-features) {
   background-color: $black;
+  background-image: url(asset_path('site/features-bg.jpg'));
+  background-size: cover;
+  background-position: center center;
   color: $white;
 
   @include element(container) {
@@ -54,6 +57,11 @@
     p {
       font-size: 1.125em;
       padding-right: 65px;
+    }
+
+    // Variate the color of the link to make it more readable
+    a {
+      color: lighten($blue, 20%);
     }
   }
 }
