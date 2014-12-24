@@ -41,6 +41,14 @@ en:
       title: "Get early access, join the waiting list:"
       enter_your_email: "Enter your email"
       request_invite: "Request invite"
+      promise: "We don\'t do spam. Ever."
   page:
     index:
       title: "Integrating Git-Flow into GitHub"
+  usp:
+    safe:
+      title: "Safe & Secure"
+      text: "We care deeply about security. We use SSL on all our requests and test our software for vulnerabilities. We also monitor incoming requests, are hosted in a safe datacenter and have hourly backups."
+    open_source:
+      title: "Open source"
+      text: "We love open source, so we decided to also open source our entire system. You can run it on our servers, or set up your own. You can also contribute and make it even better."

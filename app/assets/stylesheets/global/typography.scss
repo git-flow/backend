@@ -1,3 +1,7 @@
+@import "global/base";
+
 html, body {
   font-family: "proxima-nova", "Proxima Nova", "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+  color: $black;
+  font-size: 16px;
 }

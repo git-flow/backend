@@ -1,0 +1,43 @@
+@import "global/base";
+
+@include block(site-usps) {
+  @include element(container) {
+    @include outer-container;
+  }
+
+  @include element(usp) {
+    @include span-columns(6);
+
+    position: relative;
+    padding: 100px 65px 100px 125px;
+
+    p {
+      font-size: 1.125em;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 105px;
+      left: 60px;
+      height: 60px;
+      width: 40px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
+
+    @include modifier(secure) {
+      &:after {
+        background-image: asset_data_url('site/icons/security.svg');
+      }
+    }
+
+    @include modifier(open-source) {
+      &:after {
+        background-image: asset_data_url('site/icons/public.svg');
+      }
+    }
+  }
+}

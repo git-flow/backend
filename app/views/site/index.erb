@@ -18,8 +18,22 @@
           <%= email_field :invitation, :email, class: 'site-hero__form__input', placeholder: t('hero.form.enter_your_email') %>
           <%= button_tag t('hero.form.request_invite'), type: :submit, class: 'site-hero__form__submit' %>
         <% end %>
-        <span class="site-hero__form__promise">We don't do spam. Ever.</span>
+        <span class="site-hero__form__promise"><%= t('hero.form.promise') %></span>
       </div>
     </div>
   </div>
 </div>
+
+<div class="site-usps">
+  <div class="site-usps__container">
+    <section class="site-usps__usp site-usps__usp--secure">
+      <h2><%= t('usp.safe.title') %></h2>
+      <p><%= t('usp.safe.text') %></p>
+    </section>
+    <section class="site-usps__usp site-usps__usp--open-source">
+      <h2><%= t('usp.open_source.title') %></h2>
+      <p><%= t('usp.open_source.text') %></p>
+    </section>
+  </div>
+</div>
+
