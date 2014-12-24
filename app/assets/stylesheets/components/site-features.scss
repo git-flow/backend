@@ -37,13 +37,13 @@
 
   @include element(feature) {
     @include span-columns(6);
-    @include omega(2n+1);
+    @include omega(2n);
 
     padding-left: (60px + 65px);
     margin-bottom: 40px;
 
     // Don't include the margin-bottom on the last 2 items
-    &:nth-child(3), :nth-child(4) {
+    &:nth-child(3), &:nth-child(4) {
       margin-bottom: 0;
     }
 
