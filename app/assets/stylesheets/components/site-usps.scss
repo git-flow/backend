@@ -15,7 +15,7 @@
       font-size: 1.125em;
     }
 
-    &:after {
+    &:before {
       content: '';
       display: block;
       position: absolute;
@@ -29,13 +29,13 @@
     }
 
     @include modifier(secure) {
-      &:after {
+      &:before {
         background-image: asset_data_url('site/icons/security.svg');
       }
     }
 
     @include modifier(open-source) {
-      &:after {
+      &:before {
         background-image: asset_data_url('site/icons/public.svg');
       }
     }
