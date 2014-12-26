@@ -15,15 +15,3 @@ set :rvm_custom_path, '~/.rvm'
 set :bundle_path, nil
 set :bundle_binstubs, nil
 set :bundle_flags, '--system'
-
-namespace :deploy do
-
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
-    end
-  end
-end
