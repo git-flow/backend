@@ -12,7 +12,7 @@ gem 'turbolinks', '~> 2.5'
 gem 'bourbon', '~> 4.0'
 gem 'neat', '~> 1.7'
 
-gem 'figaro', '~> 1.0'
+gem 'dotenv-rails', '~> 1.0'
 gem 'therubyracer', platforms: :ruby
 gem 'devise', '~> 3.4'
 gem 'github_api', '~> 0.12'

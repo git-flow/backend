@@ -4,7 +4,7 @@ lock '3.3.5'
 set :application, 'gitflow'
 set :repo_url, 'git@github.com:git-flow/backend.git'
 
-set :linked_files, %w(config/application.yml)
+set :linked_files, %w(.env)
 
 # RVM
 set :rvm_type, :auto
