@@ -1,5 +1,5 @@
 namespace :unicorn do
-  %w(start stop restart).each do |command|
+  %w(start stop force-stop restart upgrade reopen-logs).each do |command|
     desc "#{command.capitalize} unicorn server"
     task command do
       on roles(:app), in: :sequence, wait: 5 do
