@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <% if Rails.env == 'production' %>
+      <%= render partial: 'global/hotjar' %>
+    <% end %>
+
     <%= display_meta_tags default_meta_tags %>
 
     <%= render partial: 'global/typekit' %>
