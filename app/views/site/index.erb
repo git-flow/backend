@@ -53,11 +53,37 @@
       </section>
       <section class="site-features__feature">
         <h3><%= t('features.pr_templates.title') %></h3>
-        <p><%= t('features.pr_templates.text', liquid_link: link_to(t('3rd_party.liquid.name'), 'https://github.com/shopify/liquid', target: '_blank')).html_safe %></p>
+        <p><%= t('features.pr_templates.text', liquid_link: link_to(t('3rd_party.liquid'), 'https://github.com/shopify/liquid', target: '_blank')).html_safe %></p>
       </section>
       <section class="site-features__feature">
         <h3><%= t('features.finish_from_github.title') %></h3>
         <p><%= t('features.finish_from_github.text').html_safe %></p>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div class="site-how-it-works" id="how-it-works">
+  <div class="site-how-it-works__container">
+    <div class="site-how-it-works__heading">
+      <i class="site-how-it-works__heading__icon site-how-it-works__heading__icon--help"></i>
+      <h1><%= t('how_it_works.title') %></h1>
+    </div>
+    <div class="site-how-it-works__steps">
+      <section class="site-how-it-works__steps__step">
+        <h3><%= t('how_it_works.create_account.title') %></h3>
+        <p><%= t('how_it_works.create_account.text') %></p>
+      </section>
+      <section class="site-how-it-works__steps__step">
+        <h3><%= t('how_it_works.authorize.title') %></h3>
+        <p><%= t('how_it_works.authorize.text') %></p>
+      </section>
+      <section class="site-how-it-works__steps__step">
+        <h3><%= t('how_it_works.template.title') %></h3>
+        <p><%= t('how_it_works.template.text') %></p>
+      </section>
+      <section class="site-how-it-works__steps__step site-how-it-works__steps__step--header-only">
+        <h1><%= t('how_it_works.done.title') %></h1>
       </section>
     </div>
   </div>

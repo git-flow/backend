@@ -20,6 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  3rd_party:
+    liquid: "Liquid"
   site:
     name: "Git-Flow for GitHub"
     description: "Git-Flow is a well-thought-out workflow that enables developers to work together in a streamlined way. Git-Flow for GitHub integrates it into GitHub."
@@ -65,6 +67,16 @@ en:
       text: "This is the first-ever extension that enables you to finish a feature without leaving GitHub. Git-Flow for Github will automatically merge your feature to <code>develop</code> and <code>master</code>."
       title: "Finish a feature right from GitHub"
     title: "Features"
-  3rd_party:
-    liquid:
-      name: "Liquid"
+  how_it_works:
+    title: "How it works"
+    create_account:
+      title: "1. Create an account"
+      text: "Before you start, you'll have to sign up for an account. With this account, you can create your templates."
+    authorize:
+      title: "2. Authorize the app"
+      text: "In order to be able to do finish your features, we need permission to your repositories."
+    done:
+      title: "And you're done!"
+    template:
+      text: "Before you can use a template, you'll have to make one. You can also choose to use a predefined one."
+      title: "3. Setup a template and form"
