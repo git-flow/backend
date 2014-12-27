@@ -1,12 +1,13 @@
 namespace :unicorn do
-  %w(start stop force-stop restart upgrade reopen-logs).each do |command|
+  %w(start stop reload restart).each do |command|
     desc "#{command.capitalize} unicorn server"
     task command do
       on roles(:app), in: :sequence, wait: 5 do
-        execute "/etc/init.d/unicorn_#{fetch(:application)} #{command}"
+        sudo "service unicorn_#{fetch(:application)} #{command}"
       end
     end
   end
+  after 'deploy:publishing', 'unicorn:reload'
 
   desc 'Set-up Unicorn on server'
   task :setup do
@@ -15,5 +16,4 @@ namespace :unicorn do
       sudo "chmod +x /etc/init.d/unicorn_#{fetch(:application)}"
     end
   end
-  # after 'deploy:setup_config', 'unicorn:setup'
 end
