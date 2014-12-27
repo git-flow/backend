@@ -15,10 +15,3 @@ set :rvm_custom_path, '~/.rvm'
 set :bundle_path, nil
 set :bundle_binstubs, nil
 set :bundle_flags, '--system'
-
-after 'deploy:publishing', 'deploy:restart'
-namespace :deploy do
-  task :restart do
-    invoke 'unicorn:reload'
-  end
-end
