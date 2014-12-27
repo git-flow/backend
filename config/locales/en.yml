@@ -64,6 +64,7 @@ en:
     finish_from_github:
       text: "This is the first-ever extension that enables you to finish a feature without leaving GitHub. Git-Flow for Github will automatically merge your feature to <code>develop</code> and <code>master</code>."
       title: "Finish a feature right from GitHub"
+    title: "Features"
   3rd_party:
     liquid:
       name: "Liquid"
