@@ -5,7 +5,7 @@ set :application, 'gitflow'
 set :repo_url, 'git@github.com:git-flow/backend.git'
 
 set :linked_files, %w(.env)
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w(bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system)
 
 # RVM
 set :rvm_type, :auto
