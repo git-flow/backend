@@ -20,7 +20,6 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
   site:
     name: "Git-Flow for GitHub"
     description: "Git-Flow is a well-thought-out workflow that enables developers to work together in a streamlined way. Git-Flow for GitHub integrates it into GitHub."
@@ -41,7 +40,7 @@ en:
       title: "Get early access, join the waiting list:"
       enter_your_email: "Enter your email"
       request_invite: "Request invite"
-      promise: "We don\'t do spam. Ever."
+      promise: "We don't do spam. Ever."
   page:
     index:
       title: "Integrating Git-Flow into GitHub"
@@ -52,3 +51,19 @@ en:
     open_source:
       title: "Open source"
       text: "We love open source, so we decided to also open source our entire system. You can run it on our servers, or set up your own. You can also contribute and make it even better."
+  features:
+    auto_branch_selection:
+      title: "Select the correct branch when comparing"
+      text: "Normally, when you compare your branch and create a pull request, you automatically compare it against the repositories' default branch. Git-Flow for GitHub automatically selects the right branch."
+    pr_forms:
+      title: "Forms to make pull requests"
+      text: "You can create forms that fill the templates you've made. Being able to just fill a form makes it both easier and quicker to propose a change. This saves you and your team both time and money."
+    pr_templates:
+      title: "Pull request template"
+      text: "Git-Flow for GitHub lets you create templates for your pull request so you have one single format for every pull request. Your pull request template can be filled with form data and is made in %{liquid_link}."
+    finish_from_github:
+      text: "This is the first-ever extension that enables you to finish a feature without leaving GitHub. Git-Flow for Github will automatically merge your feature to <code>develop</code> and <code>master</code>."
+      title: "Finish a feature right from GitHub"
+  3rd_party:
+    liquid:
+      name: "Liquid"
