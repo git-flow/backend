@@ -12,6 +12,7 @@ namespace :unicorn do
   task :setup do
     on roles(:app), in: :parallel do
       sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{fetch(:application)}"
+      sudo "chmod +x /etc/init.d/unicorn_#{fetch(:application)}"
     end
   end
   # after 'deploy:setup_config', 'unicorn:setup'
