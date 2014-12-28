@@ -6,7 +6,6 @@
  * Released under the MIT License
  */
 
-//= require ./beforesend
 //= require ./prepare
 //= require ./accept
 //= require ./confirm

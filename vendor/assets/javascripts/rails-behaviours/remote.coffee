@@ -1,6 +1,5 @@
 # Remote
 #
-#= require ./beforesend
 #
 # Implements `data-remote` for forms and links.
 #

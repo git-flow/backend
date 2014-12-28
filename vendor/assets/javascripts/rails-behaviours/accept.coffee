@@ -1,6 +1,5 @@
 # Accept
 #
-#= require ./beforesend
 #
 # Make default Accept header prefer JS.
 #
