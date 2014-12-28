@@ -23,6 +23,7 @@ gem 'sdoc', '~> 0.4', group: :doc
 
 group :production do
   gem 'unicorn', '~> 4.8'
+  gem 'newrelic_rpm', '~> 3.9'
 end
 
 

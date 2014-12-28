@@ -5,4 +5,5 @@ namespace :dotenv do
       upload! '.env', "#{shared_path}/.env"
     end
   end
+  before 'deploy:publish', 'dotenv:setup'
 end
