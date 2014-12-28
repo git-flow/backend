@@ -1,0 +1,47 @@
+<div class="site-footer site-footer--top">
+  <div class="site-footer__container">
+    <div class="site-footer__left">
+      <div class="site-footer__logo site-logo">
+        <span class="site-logo__primary-name"><%= t('site.logo.primary') %></span>
+        <span class="site-logo__secondary-name"><%= t('site.logo.secondary') %></span>
+        <span class="site-logo__beta-badge"><%= t('site.logo.beta') %></span>
+        <span class="site-logo__slogan"><%= t('site.logo.footer_slogan') %></span>
+      </div>
+    </div>
+    <div class="site-footer__right">
+      <div class="menu">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/#features"><%= t('site.nav.features') %></a></li>
+          <li><a href="/#how-it-works"><%= t('site.nav.how_it_works') %></a></li>
+          <li><a href="<%= new_user_session_path %>"><%= t('site.nav.sign_in') %></a></li>
+        </ul>
+      </div>
+      <div class="menu">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy"><%= t('site.nav.features') %></a></li>
+          <li><a href="/terms"><%= t('site.nav.how_it_works') %></a></li>
+        </ul>
+      </div>
+      <div class="menu">
+        <h4>Social</h4>
+        <ul>
+          <li><a href="https://github.com/git-flow">GitHub</a></li>
+          <li><a href="https://twitter.com/git_flow">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="site-footer site-footer--bottom">
+  <div class="site-footer__container">
+    <div class="site-footer__left">
+     <%= t('site.copyright_notice', year: copyright_year(2014)).html_safe %>
+    </div>
+    <div class="site-footer__right">
+      <a href="https://www.digitalocean.com/?refcode=2e14c34a8a3a">Hosted on DigitalOcean</a>
+    </div>
+  </div>
+</div>

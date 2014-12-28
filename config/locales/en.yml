@@ -35,6 +35,8 @@ en:
       secondary: "for GitHub"
       beta: "Beta"
       slogan: "Available for Chrome and Safari."
+      footer_slogan: "Proudly made in Holland."
+    copyright_notice: "Copyright &copy; %{year} Jeroen Visser – All registered trademarks belong to their respective owners."
   hero:
     title: "Use Git-Flow with GitHub."
     lead: "We love Git-Flow. It enables you to work in a well-thought-out workflow that just works. Except that GitHub has no support for it. But that changes now."
