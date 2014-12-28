@@ -4,6 +4,7 @@
     <% if Rails.env == 'production' %>
       <%= render partial: 'global/hotjar' %>
       <%= render partial: 'global/optimizely' %>
+      <%= render partial: 'global/google_analytics' %>
     <% end %>
 
     <%= display_meta_tags default_meta_tags %>
