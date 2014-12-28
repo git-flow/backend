@@ -5,8 +5,8 @@
 # used to set extended properties on the server.
 
 server 'isa',
-       user:        'deploy',
-       roles:       %w{web app db}
+       user:  'deploy',
+       roles: %w{web app db}
 
 set :application, 'gitflow'
 set :user, 'deploy'
