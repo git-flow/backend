@@ -1,5 +1,5 @@
-/*! (c) <%= Time.now.year %> gitflow.nl */
 /*
+ *= require copyright
  *= require plugins/reset
  *= require_tree .
  *= require_self
