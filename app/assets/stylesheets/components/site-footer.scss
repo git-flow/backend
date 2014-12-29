@@ -99,6 +99,10 @@
         font-size: 18px;
         color: rgba($white, .9);
         padding: 9px 0;
+
+        &:hover {
+          color: rgba($white, .6);
+        }
       }
     }
   }
