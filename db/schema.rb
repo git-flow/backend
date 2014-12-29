@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141222222852) do
+ActiveRecord::Schema.define(version: 20141229112024) do
 
   create_table "templates", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
@@ -41,9 +41,11 @@ ActiveRecord::Schema.define(version: 20141222222852) do
 
   create_table "waiting_list_entries", force: :cascade do |t|
     t.string   "email",      limit: 255
-    t.boolean  "status",     limit: 1
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.boolean  "status",     limit: 1,   default: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
   end
+
+  add_index "waiting_list_entries", ["email"], name: "index_waiting_list_entries_on_email", unique: true, using: :btree
 
 end

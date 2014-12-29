@@ -15,7 +15,7 @@
       <div class="site-hero__form">
         <h2><%= t('hero.form.title') %></h2>
         <%= form_tag request_invite_path, method: :post do %>
-          <%= email_field :invitation, :email, class: 'site-hero__form__input', placeholder: t('hero.form.enter_your_email') %>
+          <%= email_field :invite, :email, class: 'site-hero__form__input', placeholder: t('hero.form.enter_your_email') %>
           <%= button_tag t('hero.form.request_invite'), type: :submit, class: 'site-hero__form__submit' %>
         <% end %>
         <span class="site-hero__form__promise"><%= t('hero.form.promise') %></span>
