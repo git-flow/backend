@@ -40,7 +40,7 @@
   }
   @include modifier(bottom) {
     padding: 40px 50px;
-    font-size: 18px;
+    font-size: 16px;
     color: rgba($white, .6);
     background-color: $midnight-blue;
     @include element(left) {
