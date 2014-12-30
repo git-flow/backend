@@ -50,6 +50,9 @@ en:
   page:
     index:
       title: "Integrating Git-Flow into GitHub"
+    thank_you:
+      title: "Thank you for joining!"
+      lead: "We'll let you know once your invitation is ready."
   usp:
     safe:
       title: "Safe & Secure"

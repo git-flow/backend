@@ -6,16 +6,17 @@ class SiteController < ActionController::Base
   end
 
   def request_invite
-    @invitation_request = WaitingListEntry.create invite_params
-    if @invitation_request
+    @invitation_request = WaitingListEntry.new invite_params
+    if @invitation_request.save
       # All good, invitation inserted
+      redirect_to thank_you_path, with
     else
       # Something went wrong, maybe the person is already on the list?
+      redirect_to invitation_request_error, flash: ''
     end
   end
 
-  def terms
-
+  def thank_you
   end
 
   private
