@@ -16,9 +16,6 @@ class SiteController < ActionController::Base
     end
   end
 
-  def thank_you
-  end
-
   private
     def invite_params
       params.require(:invite).permit(:email)
