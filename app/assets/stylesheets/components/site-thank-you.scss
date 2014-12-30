@@ -1,0 +1,60 @@
+@import "global/base";
+
+@include block(site-thank-you) {
+  min-height: 700px;
+  padding: 50px 75px;
+
+  position: relative; // We want to position the bottom bar to be on the bottom
+  color: $white;
+  background: $blue url(image_path('site/bg-pattern.png'));
+  @include retina-image(image_path('site/bg-pattern@2x.png'), 899px 394px);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+
+  @include clearfix;
+
+  @include element(container) {
+    @include outer-container;
+  }
+
+  @include element(centered) {
+    padding-top: 150px;
+    text-align: center;
+
+    h1 {
+      font-size: 72px;
+      margin-bottom: 40px;
+    }
+    p {
+      font-size: 24px;
+      margin-top: 0;
+    }
+  }
+
+  @include element(bottom) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid rgba($white, .2);
+  }
+
+  @include block(share) {
+    padding: 10px 20px 20px 20px;
+    text-align: center;
+
+    @include element(call-out) {
+      padding-right: 20px;
+    }
+
+    @include element(twitter) {
+      display: inline-block;
+      position: relative;
+      top: 5px;
+    }
+    @include element(facebook) {
+      display: inline-block;
+    }
+  }
+
+}
