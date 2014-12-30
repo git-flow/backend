@@ -14,7 +14,12 @@ class SiteController < ActionController::Base
     end
   end
 
-  def invite_params
-    params.require(:invite).permit(:email)
+  def terms
+
   end
+
+  private
+    def invite_params
+      params.require(:invite).permit(:email)
+    end
 end
