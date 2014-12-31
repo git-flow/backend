@@ -6,7 +6,7 @@
 
 server 'isa',
        user:  'deploy',
-       roles: %w{web app db}
+       roles: %w(web app db)
 
 set :application, 'gitflow'
 set :user, 'deploy'
