@@ -7,7 +7,12 @@ module MetatagsHelper
       keywords:    t('site.keywords'),
       separator:   '&mdash;'.html_safe,
       og:          {
-        title: t('site.name')
+        title: title,
+        description: t('site.description'),
+        site_name: t('site.name'),
+        image: image_url('site/facebook_og.png'),
+        type: 'website',
+        url: url_for(only_path: false)
       }
     }
   end
