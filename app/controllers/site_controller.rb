@@ -11,10 +11,10 @@ class SiteController < ActionController::Base
     # An invite may fail saving because the email given might already exist
     if @invitation_request.save
       # All good, invitation inserted
-      redirect_to thank_you_path, with
+      redirect_to thank_you_path
     else
       # Something went wrong, maybe the person is already on the list?
-      redirect_to invitation_request_error, flash: ''
+      redirect_to invitation_request_error
     end
   end
 
