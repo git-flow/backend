@@ -52,6 +52,7 @@ en:
       enter_your_email: "Enter your email"
       request_invite: "Request invite"
       promise: "We don't do spam. Ever."
+      email_exists: "We're sorry, but it seems like you're on the list already, please sit tight!"
   page:
     index:
       title: "Integrating Git-Flow into GitHub"
