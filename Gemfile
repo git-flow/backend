@@ -24,7 +24,6 @@ group :production do
   gem 'newrelic_rpm', '~> 3.9'
 end
 
-
 group :development, :test do
   gem 'better_errors'
   gem 'byebug'
@@ -33,5 +32,5 @@ group :development, :test do
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-bundler', '~> 1.1'
   gem 'capistrano-rvm'
+  gem 'rubocop', require: false
 end
-

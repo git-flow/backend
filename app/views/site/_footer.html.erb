@@ -2,6 +2,7 @@
   <div class="site-footer__container">
     <div class="site-footer__left">
       <div class="site-footer__logo site-logo">
+        <a class="site-logo__link" href="<%= root_url %>"></a>
         <span class="site-logo__primary-name"><%= t('site.logo.primary') %></span>
         <span class="site-logo__secondary-name"><%= t('site.logo.secondary') %></span>
         <span class="site-logo__beta-badge"><%= t('site.logo.beta') %></span>
@@ -20,8 +21,8 @@
       <div class="menu">
         <h4>Legal</h4>
         <ul>
-          <li><a href="/privacy"><%= t('site.nav.features') %></a></li>
-          <li><a href="/terms"><%= t('site.nav.how_it_works') %></a></li>
+          <li><a href="/privacy"><%= t('site.nav.privacy') %></a></li>
+          <li><a href="/terms"><%= t('site.nav.terms') %></a></li>
         </ul>
       </div>
       <div class="menu">

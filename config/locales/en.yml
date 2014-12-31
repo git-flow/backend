@@ -22,6 +22,7 @@
 en:
   3rd_party:
     liquid: "Liquid"
+    github_project: "Github project"
   site:
     name: "Git-Flow for GitHub"
     description: "Git-Flow is a well-thought-out workflow that enables developers to work together in a streamlined way. Git-Flow for GitHub integrates it into GitHub."
@@ -30,6 +31,8 @@ en:
       features: "Features"
       how_it_works: "How it works"
       sign_in: "Sign in"
+      terms: "Terms"
+      privacy: "Privacy"
     logo:
       primary: "Git-Flow"
       secondary: "for GitHub"
@@ -37,6 +40,10 @@ en:
       slogan: "Available for Chrome and Safari."
       footer_slogan: "Proudly made in Holland."
     copyright_notice: "Copyright &copy; %{year} Jeroen Visser – All registered trademarks belong to their respective owners."
+    terms:
+      title: "Terms and Conditions"
+    privacy:
+      title: "Privacy policy"
   hero:
     title: "Use Git-Flow with GitHub."
     lead: "We love Git-Flow. It enables you to work in a well-thought-out workflow that just works. Except that GitHub has no support for it. But that changes now."
@@ -48,6 +55,9 @@ en:
   page:
     index:
       title: "Integrating Git-Flow into GitHub"
+    thank_you:
+      title: "Thank you for joining!"
+      lead: "We'll let you know once your invitation is ready."
   usp:
     safe:
       title: "Safe & Secure"
@@ -82,3 +92,16 @@ en:
     template:
       text: "Before you can use a template, you'll have to make one. You can also choose to use a predefined one."
       title: "3. Setup a template and form"
+  faq:
+    waiting:
+      question: "How long will I have to wait for my invitation?"
+      answer: "We're still really busy on developing stuff for this extension. In the meanwhile, you can request an invite. We don't know how long it takes, but in early-2015 we'll start sending out invitations."
+    features:
+      question: "When will the project have all the features?"
+      answer: "Although we have no exact date on when the extension will be able to everything we have in mind. We do however plan on finishing it before mid-2015."
+    feedback:
+      question: "How will I be able to provide feedback once I'm in?"
+      answer: "As the project is fully open-sourced, the preferred way of providing feedback is to create a ticket on our %{github_project_link}. You can also email your feedback to %{email}."
+    gitflow:
+      question: "Is Git-Flow really the best workflow for GitHub?"
+      answer: "We do think it's a really good workflow. It's very well documented, it works with big teams and is structured even when you just start using it. It might not be the best for everything, although we think that it would also work for smaller projects."
