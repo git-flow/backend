@@ -16,3 +16,16 @@ Metrics/LineLength:
 
 Style/ClassAndModuleChildren:
   Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: single_quotes
+
+Style/RedundantBegin:
+  Enabled: true
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 25
