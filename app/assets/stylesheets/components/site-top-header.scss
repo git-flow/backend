@@ -1,6 +1,0 @@
-@import "global/base";
-
-@include block(site-top-header) {
-  background-color: $blue;
-  padding: 20px 75px;
-}

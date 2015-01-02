@@ -1,8 +1,8 @@
 @import "global/base";
 
 @include block(site-hero) {
-  min-height: 700px;
-  padding: 50px 75px;
+  min-height: 600px;
+  padding: 10px 75px 0;
 
   color: $white;
   background: $blue url(image_path('site/bg-pattern.png'));

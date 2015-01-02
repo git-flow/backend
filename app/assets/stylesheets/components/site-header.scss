@@ -3,6 +3,19 @@
 @include block(site-header) {
   @include clearfix;
 
+  margin-bottom: -1px; // iPad fix
+
+  background-color: $blue;
+  padding: 50px 75px;
+
+  @include modifier(skinny) {
+    padding: 25px 75px;
+  }
+
+  @include element(container) {
+    @include outer-container;
+  }
+
   @include element(left) {
     float: left;
   }

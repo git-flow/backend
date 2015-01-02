@@ -1,15 +1,17 @@
-<header class="site-header">
-  <div class="site-header__left">
-    <div class="site-header__left_logo site-logo">
-      <a class="site-logo__link" href="<%= root_url %>"></a>
-      <span class="site-logo__primary-name"><%= t('site.logo.primary') %></span>
-      <span class="site-logo__secondary-name"><%= t('site.logo.secondary') %></span>
-      <span class="site-logo__beta-badge"><%= t('site.logo.beta') %></span>
-      <span class="site-logo__slogan"><%= t('site.logo.slogan') %></span>
+<header class="site-header<% if defined? skinny %> site-header--skinny<% end %>">
+  <div class="site-header__container">
+    <div class="site-header__left">
+      <div class="site-header__left_logo site-logo">
+        <a class="site-logo__link" href="<%= root_url %>"></a>
+        <span class="site-logo__primary-name"><%= t('site.logo.primary') %></span>
+        <span class="site-logo__secondary-name"><%= t('site.logo.secondary') %></span>
+        <span class="site-logo__beta-badge"><%= t('site.logo.beta') %></span>
+        <span class="site-logo__slogan"><%= t('site.logo.slogan') %></span>
+      </div>
     </div>
-  </div>
 
-  <div class="site-header__right">
-    <%= render partial: 'site/navigation' %>
+    <div class="site-header__right">
+      <%= render partial: 'site/navigation' %>
+    </div>
   </div>
 </header>
