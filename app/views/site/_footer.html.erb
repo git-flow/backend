@@ -15,7 +15,9 @@
         <ul>
           <li><a href="/#features"><%= t('site.nav.features') %></a></li>
           <li><a href="/#how-it-works"><%= t('site.nav.how_it_works') %></a></li>
-          <li><a href="<%= new_user_session_path %>"><%= t('site.nav.sign_in') %></a></li>
+          <% if Rails.env == 'development' %>
+            <li><a href="<%#= new_user_session_path %>"><%= t('site.nav.sign_in') %></a></li>
+          <% end %>
         </ul>
       </div>
       <div class="menu">
@@ -39,7 +41,7 @@
 <div class="site-footer site-footer--bottom">
   <div class="site-footer__container">
     <div class="site-footer__left">
-     <%= t('site.copyright_notice', year: copyright_year(2014)).html_safe %>
+      <%= t('site.copyright_notice', year: copyright_year(2014)).html_safe %>
     </div>
     <div class="site-footer__right">
       <a href="https://www.digitalocean.com/?refcode=2e14c34a8a3a">Hosted on DigitalOcean</a>
