@@ -12,7 +12,6 @@ gem 'bourbon', '~> 4.0'
 gem 'neat', '~> 1.7'
 gem 'dotenv-rails', '~> 1.0'
 gem 'therubyracer', platforms: :ruby
-gem 'devise', '~> 3.4'
 gem 'github_api', '~> 0.12'
 gem 'meta-tags', '~> 2.0'
 
