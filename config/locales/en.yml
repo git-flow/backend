@@ -33,6 +33,7 @@ en:
       sign_in: "Sign in"
       terms: "Terms"
       privacy: "Privacy"
+      sign_out: "Sign out"
     logo:
       primary: "Git-Flow"
       secondary: "for GitHub"
