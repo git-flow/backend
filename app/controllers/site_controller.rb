@@ -1,6 +1,4 @@
-class SiteController < ActionController::Base
-  protect_from_forgery with: :exception
-
+class SiteController < ApplicationController
   def index
     @invitation_request = WaitingListEntry.new
   end
