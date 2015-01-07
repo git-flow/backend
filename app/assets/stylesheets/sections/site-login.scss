@@ -11,6 +11,14 @@
     padding-top: 100px;
   }
 
+  a {
+    color: $white;
+    text-decoration: underline;
+    &:hover {
+      opacity: .8;
+    }
+  }
+
   @include element(input) {
     border-radius: 4px;
     font-size: 1.3em;
