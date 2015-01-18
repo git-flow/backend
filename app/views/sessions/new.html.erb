@@ -1,0 +1,36 @@
+<%= render partial: 'site/header' %>
+<div class="site-login">
+  <div class="site-login__container">
+    <h2><%= t('auth.sign_in.title') %></h2>
+
+    <% unless Clearance.configuration.allow_sign_up? %>
+      <p><%= t(
+        'auth.sign_in.invitation_only_text',
+        request_an_invitation: link_to(
+          t('auth.sign_in.request_an_invitation'), root_path
+        )
+      ).html_safe %></p>
+    <% end %>
+
+    <%= form_for :session, url: session_path do |form| %>
+      <%= form.text_field :email,
+                          type: 'email',
+                          autofocus: true,
+                          placeholder: t('auth.sign_in.email'),
+                          class: 'site-login__input' %>
+
+      <%= form.password_field :password,
+                              placeholder: t('auth.sign_in.password'),
+                              class: 'site-login__input' %>
+
+      <%= form.submit class: 'site-login__button site-login__button--right' %>
+
+      <% if Clearance.configuration.allow_sign_up? %>
+        <%= link_to t('auth.sign_in.sign_up_link'), sign_up_path %>
+      <% end %>
+      <%= link_to t('auth.sign_in.forgot_password_link'), new_password_path %>
+    <% end %>
+  </div>
+</div>
+
+<%= render partial: 'site/footer' %>
