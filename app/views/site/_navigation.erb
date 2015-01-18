@@ -6,9 +6,14 @@
   </li>
   <li class="site-navigation__item"><a href="/#features"><%= t('site.nav.features') %></a></li>
   <li class="site-navigation__item"><a href="/#how-it-works"><%= t('site.nav.how_it_works') %></a></li>
-  <% if Rails.env == 'development' %>
-    <li class="site-navigation__spacer"></li>
 
-    <li class="site-navigation__item"><a href="<%#= new_user_session_path %>"><%= t('site.nav.sign_in') %></a></li>
-  <% end %>
+  <li class="site-navigation__spacer"></li>
+
+  <li class="site-navigation__item">
+    <% if signed_in? %>
+      <%= link_to t('site.nav.sign_out'), sign_out_path, method: :delete %>
+    <% else %>
+      <%= link_to t('site.nav.sign_in'), sign_in_path %>
+    <% end %>
+  </li>
 </ul>

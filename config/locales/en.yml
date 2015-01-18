@@ -23,6 +23,16 @@ en:
   3rd_party:
     liquid: "Liquid"
     github_project: "Github project"
+  auth:
+    sign_in:
+      title: "Sign into your account"
+      button: "Sign in"
+      email: "Enter your email address"
+      password: "Enter your password"
+      sign_up_link: "No account yet? Sign up now!"
+      forgot_password_link: "Forgot password?"
+      invitation_only_text: "Currently, we're still in closed bèta. You can already %{request_an_invitation}."
+      request_an_invitation: "request an invitation"
   site:
     name: "Git-Flow for GitHub"
     description: "Git-Flow is a well-thought-out workflow that enables developers to work together in a streamlined way. Git-Flow for GitHub integrates it into GitHub."
@@ -33,6 +43,7 @@ en:
       sign_in: "Sign in"
       terms: "Terms"
       privacy: "Privacy"
+      sign_out: "Sign out"
     logo:
       primary: "Git-Flow"
       secondary: "for GitHub"
