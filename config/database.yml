@@ -20,5 +20,5 @@ test:
 production:
   <<: *default
   database: gitflow_production
-  username: <%= ENV['GITFLOW_DATABASE_USERNAME'] %>
-  password: <%= ENV['GITFLOW_DATABASE_PASSWORD'] %>
+  username: <%= ENV['PRODUCTION_DATABASE_USERNAME'] %>
+  password: <%= ENV['PRODUCTION_DATABASE_PASSWORD'] %>
