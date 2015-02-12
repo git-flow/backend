@@ -16,6 +16,7 @@ gem 'github_api', '~> 0.12'
 gem 'meta-tags', '~> 2.0'
 gem 'responders', '~> 2.0'
 gem 'liquid', '~> 3.0'
+gem 'ace-rails-ap', '~> 3.0'
 
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4', group: :doc
@@ -27,6 +28,7 @@ end
 
 group :development, :test do
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'byebug'
   gem 'spring'
   gem 'capistrano', '~> 3.3'
