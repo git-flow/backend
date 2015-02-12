@@ -1,6 +1,8 @@
 class TemplateController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:render_template]
 
+  respond_to :json
+
   def render_template
     @template = Template.find(params[:id])
 
@@ -10,18 +12,8 @@ class TemplateController < ApplicationController
     # Render the template itself
     output = @template.render(template_params)
 
-    respond_to do |format|
-      format.json do
-        render json: {
-                 template: {
-                   output: output
-                 }
-               }
-      end
-      format.text do
-        render text: @template.content
-      end
-    end
+    respond_with({ template: { output: output } },
+                 location: template_path(params[:id]))
   end
 
   private
