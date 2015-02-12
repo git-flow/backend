@@ -3,6 +3,10 @@ class TemplateController < ApplicationController
 
   respond_to :json
 
+  def new
+    @template = Template.new
+  end
+
   def render_template
     @template = Template.find(params[:id])
 

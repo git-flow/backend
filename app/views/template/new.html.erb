@@ -1,0 +1,12 @@
+<div class="site-top-header">
+  <%= render partial: 'site/header', locals: { skinny: true } %>
+</div>
+
+<main class="page-container">
+  <%= form_for @template, url: new_template_path do |f| %>
+    <%= f.text_field :name %>
+    <%= f.text_area :content %>
+
+    <%= f.submit %>
+  <% end %>
+</main>
