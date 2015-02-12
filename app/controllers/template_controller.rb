@@ -10,8 +10,6 @@ class TemplateController < ApplicationController
     # Render the template itself
     output = @template.render(template_params)
 
-    logger.debug output
-
     respond_to do |format|
       format.json do
         render json: {
