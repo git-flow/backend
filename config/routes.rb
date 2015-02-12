@@ -6,12 +6,7 @@ Rails.application.routes.draw do
 
   resources :template do
     member do
-      post 'render',
-           to: 'template#render_template',
-           as: :render,
-           defaults: {
-             format: :json
-           }
+      post 'render', to: 'template#render_template'
     end
   end
 

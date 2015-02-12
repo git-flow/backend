@@ -1,5 +1,5 @@
 class TemplateController < ApplicationController
-  skip_before_action :verify_authenticity_token
+  skip_before_action :verify_authenticity_token, only: [:render_template]
 
   def render_template
     @template = Template.find(params[:id])
