@@ -3,7 +3,7 @@
 </div>
 
 <main class="page-container">
-  <%= form_for @template, url: new_template_path do |f| %>
+  <%= form_for @template, url: template_index_path do |f| %>
     <%= f.text_field :name %>
     <%= f.text_area :content %>
 
