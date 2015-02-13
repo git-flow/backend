@@ -11,7 +11,7 @@ class TemplateController < ApplicationController
     @template = Template.find(params[:id])
 
     # If no template was found, we throw a 404
-    render status: :not_found and return unless @template
+    return render status: :not_found unless @template
 
     # Render the template itself
     output = @template.render(template_params)
