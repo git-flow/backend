@@ -25,22 +25,22 @@
   }(document, 'script', 'twitter-wjs');
 </script>
 <div class="site-thank-you">
-  <div class="site-thank-you__container">
-    <%= render partial: 'site/header' %>
+  <div class="container">
+    <%= render partial: 'site/header', locals: { skinny: true } %>
 
-    <div class="site-thank-you__centered">
-      <h1><%= t('page.thank_you.title') %></h1>
-      <p><%= t('page.thank_you.lead') %></p>
+    <div class="centered">
+      <h1 class="title"><%= t('page.thank_you.title') %></h1>
+      <p class="text"><%= t('page.thank_you.lead') %></p>
     </div>
   </div>
-  <div class="site-thank-you__bottom">
-    <div class="site-thank-you__container">
+  <div class="bottom">
+    <div class="container">
       <div class="share">
-        <span class="share__call-out">Share this project:</span>
-        <div class="share__twitter">
+        <span class="callout">Share this project:</span>
+        <div class="twitter">
           <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://gitflow.nl/" data-text="I just requested an invitation for @git_flow! #gitflow #chrome #extension Get yours now:" data-related="git_flow" data-dnt="true">Tweet</a>
         </div>
-        <div class="share__facebook">
+        <div class="facebook">
           <div class="fb-share-button" data-href="https://gitflow.nl/" data-layout="button_count"></div>
         </div>
       </div>
