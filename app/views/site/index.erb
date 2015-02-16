@@ -40,26 +40,24 @@
 </div>
 
 <div class="site-features" id="features">
-  <div class="site-features__container">
-    <div class="site-features__heading">
-      <h1><%= t('features.title') %></h1>
-    </div>
-    <div class="site-features__features">
-      <section class="site-features__feature">
-        <h3><%= t('features.auto_branch_selection.title') %></h3>
-        <p><%= t('features.auto_branch_selection.text') %></p>
+  <div class="container">
+    <h1 class="heading"><%= t('features.title') %></h1>
+    <div class="features">
+      <section class="feature">
+        <h3 class="title"><%= t('features.auto_branch_selection.title') %></h3>
+        <p class="text"><%= t('features.auto_branch_selection.text') %></p>
       </section>
-      <section class="site-features__feature">
-        <h3><%= t('features.pr_forms.title') %></h3>
-        <p><%= t('features.pr_forms.text') %></p>
+      <section class="feature">
+        <h3 class="title"><%= t('features.pr_forms.title') %></h3>
+        <p class="text"><%= t('features.pr_forms.text') %></p>
       </section>
-      <section class="site-features__feature">
-        <h3><%= t('features.pr_templates.title') %></h3>
-        <p><%= t('features.pr_templates.text', liquid_link: link_to(t('3rd_party.liquid'), 'https://github.com/shopify/liquid', target: '_blank')).html_safe %></p>
+      <section class="feature">
+        <h3 class="title"><%= t('features.pr_templates.title') %></h3>
+        <p class="text"><%= t('features.pr_templates.text', liquid_link: link_to(t('3rd_party.liquid'), 'https://github.com/shopify/liquid', target: '_blank', class: 'link')).html_safe %></p>
       </section>
-      <section class="site-features__feature">
-        <h3><%= t('features.finish_from_github.title') %></h3>
-        <p><%= t('features.finish_from_github.text').html_safe %></p>
+      <section class="feature">
+        <h3 class="title"><%= t('features.finish_from_github.title') %></h3>
+        <p class="text"><%= t('features.finish_from_github.text').html_safe %></p>
       </section>
     </div>
   </div>
