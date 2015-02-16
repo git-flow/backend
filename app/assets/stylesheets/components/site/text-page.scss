@@ -1,0 +1,8 @@
+@import "global/base";
+
+.site-text-page {
+  > .container {
+    @include outer-container(700px);
+    padding: 50px 75px;
+  }
+}
