@@ -1,36 +1,21 @@
 @import "global/base";
 
-@include block(site-footer) {
-  @include element(container) {
+.site-footer {
+  > .container {
     @include outer-container;
   }
 
-  @include element(left) {
-    float: left;
-
-    @include media($tablet) {
-      float: none;
-    }
-  }
-
-  @include element(right) {
-    float: right;
-
-    @include media($tablet) {
-      float: none;
-    }
-  }
-
   // We have the top and bottom parts, divided as
-  // modifiers.
-  @include modifier(top) {
+  // variants.
+  &.-top {
     padding: 0 50px;
     background-color: $wet-asphalt;
 
-    @include element(left) {
+    .left {
       padding: 50px 0;
     }
-    @include element(right) {
+
+    .right {
       padding: 50px 0;
 
       @include media($tablet) {
@@ -38,12 +23,13 @@
       }
     }
   }
-  @include modifier(bottom) {
+
+  &.-bottom {
     padding: 40px 50px;
     font-size: 16px;
     color: rgba($white, .6);
     background-color: $midnight-blue;
-    @include element(left) {
+    .left {
       max-width: 70vw;
 
       // Make sure that on tablet, it gets the full width.
@@ -51,7 +37,7 @@
         max-width: none;
       }
     }
-    @include element(right) {
+    .right {
       text-align: right;
 
       @include media($tablet) {
@@ -69,7 +55,25 @@
     }
   }
 
-  @include block(menu) {
+  // There's a left side, and a right side.
+  > .container > .left {
+    float: left;
+
+    @include media($tablet) {
+      float: none;
+    }
+  }
+
+  > .container > .right {
+    float: right;
+
+    @include media($tablet) {
+      float: none;
+    }
+  }
+
+  // Footer navigation
+  .menu {
     float: left;
 
     @include media($tablet) {
@@ -81,14 +85,14 @@
       padding-right: 100px;
     }
 
-    h4 {
+    .title {
       text-transform: uppercase;
       color: rgba($white, 0.7);
       margin-bottom: 6px;
       margin-top: 0;
     }
 
-    ul {
+    .navigation {
       list-style: none;
       margin: 0;
       padding: 0;
