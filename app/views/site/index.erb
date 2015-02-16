@@ -2,90 +2,88 @@
 <% set_meta_tags(reverse: false) %>
 <%= render partial: 'site/header' %>
 <div class="site-hero">
-  <div class="site-hero__container">
-    <div class="site-hero__browser">
+  <div class="container">
+    <div class="browser">
       <!-- Screenshot here -->
     </div>
 
-    <div class="site-hero__lead">
-      <h1><%= t('hero.title') %></h1>
-      <p><%= t('hero.lead') %></p>
+    <div class="lead">
+      <h1 class="title"><%= t('hero.title') %></h1>
+      <p class="text"><%= t('hero.lead') %></p>
 
-      <div class="site-hero__form">
-        <h2><%= t('hero.form.title') %></h2>
+      <div class="form">
+        <h2 class="title"><%= t('hero.form.title') %></h2>
         <%= form_tag request_invite_path, method: :post do %>
-          <%= email_field :invite, :email, class: 'site-hero__form__input', placeholder: t('hero.form.enter_your_email') %>
-          <%= button_tag t('hero.form.request_invite'), type: :submit, class: 'site-hero__form__submit' %>
+          <%= email_field :invite, :email, class: 'input', placeholder: t('hero.form.enter_your_email') %>
+          <%= button_tag t('hero.form.request_invite'), type: :submit, class: 'submit' %>
         <% end %>
         <% if flash[:email_error] %>
-          <span class="site-hero__form__error"><%= flash[:email_error] %></span>
+          <span class="error"><%= flash[:email_error] %></span>
         <% end %>
-        <span class="site-hero__form__promise"><%= t('hero.form.promise') %></span>
+        <span class="promise"><%= t('hero.form.promise') %></span>
       </div>
     </div>
   </div>
 </div>
 
 <div class="site-usps">
-  <div class="site-usps__container">
-    <section class="site-usps__usp site-usps__usp--secure">
-      <h2><%= t('usp.safe.title') %></h2>
-      <p><%= t('usp.safe.text') %></p>
+  <div class="container">
+    <section class="usp -secure">
+      <h2 class="title"><%= t('usp.safe.title') %></h2>
+      <p class="text"><%= t('usp.safe.text') %></p>
     </section>
-    <section class="site-usps__usp site-usps__usp--open-source">
-      <h2><%= t('usp.open_source.title') %></h2>
-      <p><%= t('usp.open_source.text') %></p>
+    <section class="usp -open-source">
+      <h2 class="title"><%= t('usp.open_source.title') %></h2>
+      <p class="text"><%= t('usp.open_source.text') %></p>
     </section>
   </div>
 </div>
 
 <div class="site-features" id="features">
-  <div class="site-features__container">
-    <div class="site-features__heading">
-      <h1><%= t('features.title') %></h1>
-    </div>
-    <div class="site-features__features">
-      <section class="site-features__feature">
-        <h3><%= t('features.auto_branch_selection.title') %></h3>
-        <p><%= t('features.auto_branch_selection.text') %></p>
+  <div class="container">
+    <h1 class="heading"><%= t('features.title') %></h1>
+    <div class="features">
+      <section class="feature">
+        <h3 class="title"><%= t('features.auto_branch_selection.title') %></h3>
+        <p class="text"><%= t('features.auto_branch_selection.text') %></p>
       </section>
-      <section class="site-features__feature">
-        <h3><%= t('features.pr_forms.title') %></h3>
-        <p><%= t('features.pr_forms.text') %></p>
+      <section class="feature">
+        <h3 class="title"><%= t('features.pr_forms.title') %></h3>
+        <p class="text"><%= t('features.pr_forms.text') %></p>
       </section>
-      <section class="site-features__feature">
-        <h3><%= t('features.pr_templates.title') %></h3>
-        <p><%= t('features.pr_templates.text', liquid_link: link_to(t('3rd_party.liquid'), 'https://github.com/shopify/liquid', target: '_blank')).html_safe %></p>
+      <section class="feature">
+        <h3 class="title"><%= t('features.pr_templates.title') %></h3>
+        <p class="text"><%= t('features.pr_templates.text', liquid_link: link_to(t('3rd_party.liquid'), 'https://github.com/shopify/liquid', target: '_blank', class: 'link')).html_safe %></p>
       </section>
-      <section class="site-features__feature">
-        <h3><%= t('features.finish_from_github.title') %></h3>
-        <p><%= t('features.finish_from_github.text').html_safe %></p>
+      <section class="feature">
+        <h3 class="title"><%= t('features.finish_from_github.title') %></h3>
+        <p class="text"><%= t('features.finish_from_github.text').html_safe %></p>
       </section>
     </div>
   </div>
 </div>
 
 <div class="site-how-it-works" id="how-it-works">
-  <div class="site-how-it-works__container">
-    <div class="site-how-it-works__heading">
-      <i class="site-how-it-works__heading__icon site-how-it-works__heading__icon--help"></i>
+  <div class="container">
+    <div class="heading">
+      <i class="icon -help"></i>
       <h1><%= t('how_it_works.title') %></h1>
     </div>
-    <div class="site-how-it-works__steps">
-      <section class="site-how-it-works__steps__step">
-        <h3><%= t('how_it_works.create_account.title') %></h3>
-        <p><%= t('how_it_works.create_account.text') %></p>
+    <div class="steps">
+      <section class="step">
+        <h3 class="title"><%= t('how_it_works.create_account.title') %></h3>
+        <p class="text"><%= t('how_it_works.create_account.text') %></p>
       </section>
-      <section class="site-how-it-works__steps__step">
-        <h3><%= t('how_it_works.template.title') %></h3>
-        <p><%= t('how_it_works.template.text') %></p>
+      <section class="step">
+        <h3 class="title"><%= t('how_it_works.template.title') %></h3>
+        <p class="text"><%= t('how_it_works.template.text') %></p>
       </section>
-      <section class="site-how-it-works__steps__step">
-        <h3><%= t('how_it_works.authorize.title') %></h3>
-        <p><%= t('how_it_works.authorize.text') %></p>
+      <section class="step">
+        <h3 class="title"><%= t('how_it_works.authorize.title') %></h3>
+        <p class="text"><%= t('how_it_works.authorize.text') %></p>
       </section>
-      <section class="site-how-it-works__steps__step site-how-it-works__steps__step--header-only">
-        <h1><%= t('how_it_works.done.title') %></h1>
+      <section class="step -header-only">
+        <h1 class="title"><%= t('how_it_works.done.title') %></h1>
       </section>
     </div>
   </div>

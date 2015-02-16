@@ -1,25 +1,30 @@
 @import "global/base";
 
-@include block(site-login) {
+.site-login {
   overflow: auto;
   color: $white;
   min-height: 600px;
   background-color: $blue;
 
-  @include element(container) {
+  > .container {
     @include outer-container(400px);
     padding-top: 100px;
   }
 
-  a {
+  .link {
     color: $white;
     text-decoration: underline;
+
+    &.-left-space {
+      padding-left: 10px;
+    }
+
     &:hover {
       opacity: .8;
     }
   }
 
-  @include element(input) {
+  .input {
     border-radius: 4px;
     font-size: 1.3em;
     outline: none;
@@ -36,7 +41,7 @@
     }
   }
 
-  @include element(button) {
+  .button {
     $border-width: 2px;
     border-radius: 4px;
     font-size: 1.3em;
@@ -45,7 +50,7 @@
     background-color: $positive;
     color: white;
 
-    @include modifier(right) {
+    &.-right {
       float: right;
     }
   }
