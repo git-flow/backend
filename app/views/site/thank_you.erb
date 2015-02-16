@@ -49,24 +49,24 @@
 </div>
 
 <div class="site-faq">
-  <div class="site-faq__container">
+  <div class="container">
     <h1>Frequently asked questions</h1>
-    <div class="site-faq__questions">
-      <section class="site-faq__questions__question">
-        <h3><%= t('faq.waiting.question') %></h3>
-        <p><%= t('faq.waiting.answer') %></p>
+    <div class="questions">
+      <section class="question">
+        <h3 class="title"><%= t('faq.waiting.question') %></h3>
+        <p class="text"><%= t('faq.waiting.answer') %></p>
       </section>
-      <section class="site-faq__questions__question">
-        <h3><%= t('faq.features.question') %></h3>
-        <p><%= t('faq.features.answer') %></p>
+      <section class="question">
+        <h3 class="title"><%= t('faq.features.question') %></h3>
+        <p class="text"><%= t('faq.features.answer') %></p>
       </section>
-      <section class="site-faq__questions__question">
-        <h3><%= t('faq.feedback.question') %></h3>
-        <p><%= t('faq.feedback.answer', github_project_link: link_to(t('3rd_party.github_project'), 'https://github.com/git-flow/backend'), email: mail_to('feedback@gitflow.nl')).html_safe %></p>
+      <section class="question">
+        <h3 class="title"><%= t('faq.feedback.question') %></h3>
+        <p class="text"><%= t('faq.feedback.answer', github_project_link: link_to(t('3rd_party.github_project'), 'https://github.com/git-flow/backend'), email: mail_to('feedback@gitflow.nl')).html_safe %></p>
       </section>
-      <section class="site-faq__questions__question">
-        <h3><%= t('faq.gitflow.question') %></h3>
-        <p><%= t('faq.gitflow.answer') %></p>
+      <section class="question">
+        <h3 class="title"><%= t('faq.gitflow.question') %></h3>
+        <p class="text"><%= t('faq.gitflow.answer') %></p>
       </section>
     </div>
   </div>
