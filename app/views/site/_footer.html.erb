@@ -1,7 +1,7 @@
-<div class="site-footer site-footer--top">
-  <div class="site-footer__container">
-    <div class="site-footer__left">
-      <div class="site-footer__logo site-logo">
+<div class="site-footer -top">
+  <div class="container">
+    <div class="left">
+      <div class="logo site-logo">
         <a class="link" href="<%= root_url %>"></a>
         <span class="primary"><%= t('site.logo.primary') %></span>
         <span class="secondary"><%= t('site.logo.secondary') %></span>
@@ -9,10 +9,10 @@
         <span class="slogan"><%= t('site.logo.footer_slogan') %></span>
       </div>
     </div>
-    <div class="site-footer__right">
+    <div class="right">
       <div class="menu">
-        <h4>Product</h4>
-        <ul>
+        <h4 class="title">Product</h4>
+        <ul class="navigation">
           <li><a href="/#features"><%= t('site.nav.features') %></a></li>
           <li><a href="/#how-it-works"><%= t('site.nav.how_it_works') %></a></li>
           <li>
@@ -25,15 +25,15 @@
         </ul>
       </div>
       <div class="menu">
-        <h4>Legal</h4>
-        <ul>
+        <h4 class="title">Legal</h4>
+        <ul class="navigation">
           <li><a href="/privacy"><%= t('site.nav.privacy') %></a></li>
           <li><a href="/terms"><%= t('site.nav.terms') %></a></li>
         </ul>
       </div>
       <div class="menu">
-        <h4>Social</h4>
-        <ul>
+        <h4 class="title">Social</h4>
+        <ul class="navigation">
           <li><a href="https://github.com/git-flow">GitHub</a></li>
           <li><a href="https://twitter.com/git_flow">Twitter</a></li>
         </ul>
@@ -42,12 +42,12 @@
   </div>
 </div>
 
-<div class="site-footer site-footer--bottom">
-  <div class="site-footer__container">
-    <div class="site-footer__left">
+<div class="site-footer -bottom">
+  <div class="container">
+    <div class="left">
       <%= t('site.copyright_notice', year: copyright_year(2014)).html_safe %>
     </div>
-    <div class="site-footer__right">
+    <div class="right">
       <a href="https://www.digitalocean.com/?refcode=2e14c34a8a3a">Hosted on DigitalOcean</a>
     </div>
   </div>
