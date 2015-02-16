@@ -1,21 +1,22 @@
 @import "global/base";
 
-@include block(site-navigation) {
+.site-navigation {
   padding: 0;
   list-style: none;
 
-  @include element(item) {
+  > .item {
     float: left;
 
     // Make sure that there's no padding at the beginning and end.
-    &:first-child a {
-        padding-left: 0;
-    }
-    &:last-child a {
-        padding-right: 0;
+    &:first-child > a {
+      padding-left: 0;
     }
 
-    a {
+    &:last-child > a {
+      padding-right: 0;
+    }
+
+    > a {
       font-size: 18px;
       font-weight: bold;
       padding: 5px 17px;
@@ -28,7 +29,7 @@
     }
   }
 
-  @include element(spacer) {
+  > .spacer {
     position: relative;
     top: -4px;
     float: left;
