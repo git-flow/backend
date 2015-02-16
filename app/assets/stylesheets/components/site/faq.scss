@@ -1,0 +1,18 @@
+@import "global/base";
+
+.site-faq > .container {
+  @include outer-container;
+  padding: 100px 75px;
+
+  > .questions > .question {
+    @include span-columns(6);
+    @include omega(2n);
+
+    > .title {
+      margin-bottom: 5px;
+    }
+    > .text {
+      margin-top: 0;
+    }
+  }
+}
