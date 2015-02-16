@@ -1,8 +1,0 @@
-@import "global/base";
-
-@include block(site-legal) {
-  @include element(container) {
-    @include outer-container(700px);
-    padding: 50px 75px;
-  }
-}

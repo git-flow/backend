@@ -1,13 +1,13 @@
 <%= render partial: 'site/header' %>
 <div class="site-login">
-  <div class="site-login__container">
-    <h2><%= t('auth.sign_in.title') %></h2>
+  <div class="container">
+    <h2 class="title"><%= t('auth.sign_in.title') %></h2>
 
     <% unless Clearance.configuration.allow_sign_up? %>
-      <p><%= t(
+      <p class="notice"><%= t(
         'auth.sign_in.invitation_only_text',
         request_an_invitation: link_to(
-          t('auth.sign_in.request_an_invitation'), root_path
+          t('auth.sign_in.request_an_invitation'), root_path, class: 'link'
         )
       ).html_safe %></p>
     <% end %>
@@ -17,18 +17,18 @@
                           type: 'email',
                           autofocus: true,
                           placeholder: t('auth.sign_in.email'),
-                          class: 'site-login__input' %>
+                          class: 'input' %>
 
       <%= form.password_field :password,
                               placeholder: t('auth.sign_in.password'),
-                              class: 'site-login__input' %>
+                              class: 'input' %>
 
-      <%= form.submit class: 'site-login__button site-login__button--right' %>
+      <%= form.submit class: 'button -right' %>
 
       <% if Clearance.configuration.allow_sign_up? %>
-        <%= link_to t('auth.sign_in.sign_up_link'), sign_up_path %>
+        <%= link_to t('auth.sign_in.sign_up_link'), sign_up_path, class: 'link -left-space' %>
       <% end %>
-      <%= link_to t('auth.sign_in.forgot_password_link'), new_password_path %>
+      <%= link_to t('auth.sign_in.forgot_password_link'), new_password_path, class: 'link' %>
     <% end %>
   </div>
 </div>
