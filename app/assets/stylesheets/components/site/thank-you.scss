@@ -1,6 +1,6 @@
 @import "global/base";
 
-@include block(site-thank-you) {
+.site-thank-you {
   min-height: 700px;
   padding: 50px 75px;
 
@@ -13,47 +13,49 @@
 
   @include clearfix;
 
-  @include element(container) {
+  .container {
     @include outer-container;
   }
 
-  @include element(centered) {
+  .centered {
     padding-top: 150px;
     text-align: center;
 
-    h1 {
+    > .title {
       font-size: 72px;
       margin-bottom: 40px;
     }
-    p {
+
+    > .text {
       font-size: 24px;
       margin-top: 0;
     }
   }
 
-  @include element(bottom) {
+  .bottom {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     border-top: 1px solid rgba($white, .2);
-  }
 
-  @include block(share) {
-    padding: 10px 20px 20px 20px;
-    text-align: center;
+    > .container > .share {
+      padding: 10px 20px 20px 20px;
+      text-align: center;
 
-    @include element(call-out) {
-      padding-right: 20px;
-    }
+      > .callout {
+        padding-right: 20px;
+      }
 
-    @include element(twitter) {
-      display: inline-block;
-      position: relative;
-      top: 5px;
-    }
-    @include element(facebook) {
-      display: inline-block;
+      > .twitter {
+        display: inline-block;
+        position: relative;
+        top: 5px;
+      }
+
+      > .facebook {
+        display: inline-block;
+      }
     }
   }
 
