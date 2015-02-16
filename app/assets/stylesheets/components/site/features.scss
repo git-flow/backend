@@ -1,41 +1,39 @@
 @import "global/base";
 
-@include block(site-features) {
+.site-features {
   background-color: $black;
   background-image: url(asset_path('site/features-bg.jpg'));
   background-size: cover;
   background-position: center center;
   color: $white;
 
-  @include element(container) {
+  > .container {
     @include outer-container;
     padding: 100px 0;
   }
 
-  @include element(heading) {
-    h1 {
-      padding-left: (60px + 65px);
-      position: relative;
+  .heading {
+    padding-left: (60px + 65px);
+    position: relative;
 
-      &:before {
-        content: '';
-        display: block;
-        width: 40px;
-        height: 60px;
+    &:before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 60px;
 
-        position: absolute;
-        left: 65px;
-        top: -10px;
+      position: absolute;
+      left: 65px;
+      top: -10px;
 
-        background-image: asset_data_url('site/icons/features.svg');
-        background-size: contain;
-        background-position: center center;
-        background-repeat: no-repeat;
-      }
+      background-image: asset_data_url('site/icons/features.svg');
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
     }
   }
 
-  @include element(feature) {
+  .features > .feature {
     @include span-columns(6);
     @include omega(2n);
 
@@ -47,20 +45,20 @@
       margin-bottom: 0;
     }
 
-    h3 {
+    .title {
       font-size: 1.5em;
       font-weight: normal;
       margin: 0;
       max-width: 95%;
     }
 
-    p {
+    .text {
       font-size: 1.125em;
       padding-right: 65px;
     }
 
     // Variate the color of the link to make it more readable
-    a {
+    .link {
       color: lighten($blue, 20%);
     }
   }
