@@ -65,14 +65,14 @@
     }
   }
 
-  > .container > .lead .form form {
+  > .container > .lead .form {
     margin-top: 100px;
 
     @include media($tablet) {
       margin-top: 50px;
     }
 
-    > .input {
+    > form > .input {
       border-radius: 4px;
       font-size: 1.3em;
       outline: none;
@@ -87,7 +87,7 @@
       }
     }
 
-    > .submit {
+    > form > .submit {
       $border-width: 2px;
       border-radius: 4px;
       font-size: 1.3em;
