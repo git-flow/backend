@@ -1,6 +1,6 @@
 @import "global/base";
 
-@include block(site-header) {
+.site-header {
   @include clearfix;
 
   margin-bottom: -1px; // iPad fix
@@ -8,18 +8,18 @@
   background-color: $blue;
   padding: 50px 75px;
 
-  @include modifier(skinny) {
+  &.-skinny {
     padding: 25px 75px;
   }
 
-  @include element(container) {
+  > .container {
     @include outer-container;
   }
 
-  @include element(left) {
+  > .container > .left {
     float: left;
   }
-  @include element(right) {
+  > .container > .right {
     float: right;
   }
 }

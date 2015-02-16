@@ -1,7 +1,7 @@
-<header class="site-header<% if defined? skinny %> site-header--skinny<% end %>">
-  <div class="site-header__container">
-    <div class="site-header__left">
-      <div class="site-header__left_logo site-logo">
+<header class="site-header<% if defined? skinny %> -skinny<% end %>">
+  <div class="container">
+    <div class="left">
+      <div class="logo site-logo">
         <a class="link" href="<%= root_url %>"></a>
         <span class="primary"><%= t('site.logo.primary') %></span>
         <span class="secondary"><%= t('site.logo.secondary') %></span>
@@ -10,7 +10,7 @@
       </div>
     </div>
 
-    <div class="site-header__right">
+    <div class="right">
       <%= render partial: 'site/navigation' %>
     </div>
   </div>
