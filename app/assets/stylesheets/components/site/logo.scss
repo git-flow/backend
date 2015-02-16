@@ -1,11 +1,11 @@
 @import "global/base";
 
-@include block(site-logo) {
+.site-logo {
   display: inline-block;
   position: relative; // We want to position a link inside this.
   color: white;
 
-  @include element(link) {
+  > .link {
     position: absolute;
     top: 0;
     left: 0;
@@ -13,18 +13,18 @@
     bottom: 0;
   }
 
-  @include element(primary-name) {
+  > .primary {
     font-size: 24px;
     font-weight: bold;
   }
 
-  @include element(secondary-name) {
+  > .secondary {
     color: rgba($white, .5);
     font-size: 24px;
     font-weight: normal;
   }
 
-  @include element(beta-badge) {
+  > .beta {
     position: relative;
     top: -12px;
     font-size: 8px;
@@ -33,7 +33,7 @@
     @include clearfix;
   }
 
-  @include element(slogan) {
+  > .slogan {
     color: rgba($white, .8);
   }
 }
