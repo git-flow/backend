@@ -2,25 +2,25 @@
 <% set_meta_tags(reverse: false) %>
 <%= render partial: 'site/header' %>
 <div class="site-hero">
-  <div class="site-hero__container">
-    <div class="site-hero__browser">
+  <div class="container">
+    <div class="browser">
       <!-- Screenshot here -->
     </div>
 
-    <div class="site-hero__lead">
-      <h1><%= t('hero.title') %></h1>
-      <p><%= t('hero.lead') %></p>
+    <div class="lead">
+      <h1 class="title"><%= t('hero.title') %></h1>
+      <p class="text"><%= t('hero.lead') %></p>
 
-      <div class="site-hero__form">
-        <h2><%= t('hero.form.title') %></h2>
+      <div class="form">
+        <h2 class="title"><%= t('hero.form.title') %></h2>
         <%= form_tag request_invite_path, method: :post do %>
-          <%= email_field :invite, :email, class: 'site-hero__form__input', placeholder: t('hero.form.enter_your_email') %>
-          <%= button_tag t('hero.form.request_invite'), type: :submit, class: 'site-hero__form__submit' %>
+          <%= email_field :invite, :email, class: 'input', placeholder: t('hero.form.enter_your_email') %>
+          <%= button_tag t('hero.form.request_invite'), type: :submit, class: 'submit' %>
         <% end %>
         <% if flash[:email_error] %>
-          <span class="site-hero__form__error"><%= flash[:email_error] %></span>
+          <span class="error"><%= flash[:email_error] %></span>
         <% end %>
-        <span class="site-hero__form__promise"><%= t('hero.form.promise') %></span>
+        <span class="promise"><%= t('hero.form.promise') %></span>
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 @import "global/base";
 
-@include block(site-hero) {
+.site-hero {
   min-height: 600px;
   padding: 10px 75px 0;
 
@@ -12,11 +12,11 @@
 
   @include clearfix;
 
-  @include element(container) {
+  > .container {
     @include outer-container;
   }
 
-  @include element(browser) {
+  > .container > .browser {
     @include span-columns(7);
 
     margin-top: 40px;
@@ -33,37 +33,46 @@
     background-size: contain;
     @include retina-image(image_path('site/browser@2x.png'));
 
+    @include media($tablet) {
+      @include media($tablet) {
+        @include span-columns(5);
+        margin-top: 0;
+      }
+    }
   }
 
-  @include element(lead) {
+  > .container > .lead {
     @include span-columns(5);
     margin-top: 90px;
     padding-left: 0;
 
-    h1 {
+    .title {
       font-size: 2.1em;
       margin-bottom: 10px;
     }
-    p {
+
+    .text {
       margin-top: 0;
       font-size: 1.4em;
     }
+
+    @include media($tablet) {
+      .text {
+        font-size: 1.2em;
+      }
+
+      @include span-columns(7);
+    }
   }
 
-  @include element(form) {
+  > .container > .lead .form form {
     margin-top: 100px;
 
     @include media($tablet) {
       margin-top: 50px;
     }
 
-    @include element(error) {
-      display: inline-block;
-      color: $negative;
-      margin-top: 10px;
-    }
-
-    @include element(input) {
+    > .input {
       border-radius: 4px;
       font-size: 1.3em;
       outline: none;
@@ -77,7 +86,8 @@
         color: rgba($white, .7);
       }
     }
-    @include element(submit) {
+
+    > .submit {
       $border-width: 2px;
       border-radius: 4px;
       font-size: 1.3em;
@@ -86,7 +96,14 @@
       background-color: $positive;
       color: white;
     }
-    @include element(promise) {
+
+    > .error {
+      display: inline-block;
+      color: $negative;
+      margin-top: 10px;
+    }
+
+    > .promise {
       display: inline-block;
       font-size: .8em;
       padding-top: 10px;
@@ -94,16 +111,4 @@
     }
   }
 
-  @include media($tablet) {
-    @include element(browser) {
-      @include span-columns(5);
-      margin-top: 0;
-    }
-    @include element(lead) {
-      p {
-        font-size: 1.2em;
-      }
-      @include span-columns(7);
-    }
-  }
 }
