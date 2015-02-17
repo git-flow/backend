@@ -1,5 +1,7 @@
 /*= require copyright
  *= require turbolinks
- *= require zepto
  *= require rails-behaviours
- *= require_tree . */
+ *= require jquery
+ *= require bootstrap-sprockets
+ *= require_tree .
+ */

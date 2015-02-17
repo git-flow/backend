@@ -17,6 +17,7 @@ gem 'meta-tags', '~> 2.0'
 gem 'responders', '~> 2.0'
 gem 'liquid', '~> 3.0'
 gem 'ace-rails-ap', '~> 3.0'
+gem 'jquery-rails', '~> 4.0'
 gem 'bootstrap-sass', '~> 3.3'
 
 gem 'jbuilder', '~> 2.0'
