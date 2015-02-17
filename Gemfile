@@ -38,4 +38,6 @@ group :development, :test do
   gem 'capistrano-bundler', '~> 1.1'
   gem 'capistrano-rvm'
   gem 'rubocop', require: false
+  gem 'coffee-rails-source-maps'
+  gem 'sass-rails-source-maps'
 end

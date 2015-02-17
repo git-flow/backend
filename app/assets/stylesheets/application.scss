@@ -1,9 +1,10 @@
 /*
+ *= require_self
  *= require copyright
  *= require plugins/box-sizing
  *= require plugins/reset
- *= require_tree .
- *= require_self
+ *= require_tree
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
