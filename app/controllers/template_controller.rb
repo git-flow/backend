@@ -1,12 +1,11 @@
 class TemplateController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:render_template]
+  respond_to :json, :html
 
-  respond_to :json
   def new
     @template = Template.new
   end
 
-  respond_to :json, :html
   def create
     @template = Template.new(create_template_params)
     @template.user = current_user
