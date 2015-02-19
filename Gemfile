@@ -19,6 +19,7 @@ gem 'liquid', '~> 3.0'
 gem 'ace-rails-ap', '~> 3.0'
 gem 'jquery-rails', '~> 4.0'
 gem 'bootstrap-sass', '~> 3.3'
+gem 'bh', '~> 1.3'
 
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4', group: :doc

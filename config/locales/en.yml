@@ -29,7 +29,7 @@ en:
       button: "Sign in"
       email: "Enter your email address"
       password: "Enter your password"
-      sign_up_link: "No account yet? Sign up now!"
+      sign_up_link: "Sign up"
       forgot_password_link: "Forgot password?"
       invitation_only_text: "Currently, we're still in closed bèta. You can already %{request_an_invitation}."
       request_an_invitation: "request an invitation"
@@ -117,3 +117,6 @@ en:
     gitflow:
       question: "Is Git-Flow really the best workflow for GitHub?"
       answer: "We do think it's a really good workflow. It's very well documented, it works with big teams and is structured even when you just start using it. It might not be the best for everything, although we think that it would also work for smaller projects."
+  template:
+    create:
+      use_liquid: "You can use %{liquid} for your templates."

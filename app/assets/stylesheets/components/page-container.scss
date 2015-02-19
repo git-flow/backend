@@ -1,0 +1,9 @@
+@import "global/base";
+
+.page-container {
+  @include outer-container;
+  
+  &.-with-top-margin {
+    margin-top: 50px;  
+  }
+}
