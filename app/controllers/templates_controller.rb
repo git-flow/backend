@@ -1,4 +1,4 @@
-class TemplateController < ApplicationController
+class TemplatesController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:render_template]
   respond_to :json, :html
 
