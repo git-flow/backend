@@ -8,7 +8,7 @@
       <h1 class="panel-title">Create a new template...</h1>
     </div>
     <div class="panel-body">
-      <%= form_for @template, url: template_index_path, layout: :basic do |f| %>
+      <%= form_for @template, url: templates_path, layout: :basic do |f| %>
         <%= f.text_field :name,
                          label: 'Title',
                          placeholder: 'Choose a title for your template...' %>
