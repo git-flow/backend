@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :templates do
     member do
-      post 'render', to: 'template#render_template'
+      post 'render', to: 'templates#render_template'
     end
   end
 
