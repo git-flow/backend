@@ -41,4 +41,5 @@ group :development, :test do
   gem 'rubocop', require: false
   gem 'coffee-rails-source-maps'
   gem 'sass-rails-source-maps'
+  gem 'i18n-debug'
 end

@@ -123,6 +123,8 @@ GEM
     hashie (3.4.0)
     hike (1.2.3)
     i18n (0.7.0)
+    i18n-debug (1.0.0)
+      i18n (~> 0.0)
     jbuilder (2.2.6)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -269,6 +271,7 @@ DEPENDENCIES
   coffee-rails-source-maps
   dotenv-rails (~> 1.0)
   github_api (~> 0.12)
+  i18n-debug
   jbuilder (~> 2.0)
   jquery-rails (~> 4.0)
   liquid (~> 3.0)
