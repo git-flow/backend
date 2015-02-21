@@ -1,7 +1,7 @@
 en:
   3rd_party:
     liquid: "Liquid"
-    github_project: "Github project"
+    github_project: "GitHub project"
   auth:
     sign_in:
       title: "Sign into your account"
