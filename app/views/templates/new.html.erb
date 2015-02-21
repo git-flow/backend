@@ -15,7 +15,7 @@
         <%= f.text_area :content,
                         label: 'Template',
                         placeholder: 'This is the actual template used.',
-                        help: t('template.create.use_liquid', link_to('Liquid', 'https://github.com/shopify/liquid')).html_safe
+                        help: t('template.create.use_liquid', liquid: link_to('Liquid', 'https://github.com/shopify/liquid')).html_safe
         %>
 
         <%= f.submit %>
