@@ -2,8 +2,17 @@
 
 .page-container {
   @include outer-container;
-  
+
   &.-with-top-margin {
-    margin-top: 50px;  
+    margin-top: 50px;
+  }
+
+  &.-with-bottom-margin {
+    margin-bottom: 50px;
+  }
+
+  &.-with-margin {
+    @extend .-with-top-margin;
+    @extend .-with-bottom-margin;
   }
 }
