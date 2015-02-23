@@ -8,7 +8,7 @@ class TemplatesController < ApplicationController
 
   def create
     @template = Template.new(create_template_params)
-    @template.user = current_user
+    @template.user_id = current_user.id
     @template.save
 
     respond_with @template
