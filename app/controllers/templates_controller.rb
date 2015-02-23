@@ -18,6 +18,15 @@ class TemplatesController < ApplicationController
     respond_with @template, location: edit_template_path(@template)
   end
 
+  def edit
+    @template = Template.find(params[:id])
+  end
+
+  def update
+    @template = Template.find(params[:id])
+    @template.update(update_template_params)
+  end
+
   def render_template
     @template = Template.find(params[:id])
 
@@ -39,6 +48,10 @@ class TemplatesController < ApplicationController
   end
 
   private
+
+  def update_template_params
+    params.require(:template).permit(:name, :content)
+  end
 
   def create_template_params
     params.require(:template).permit(:name, :content)
