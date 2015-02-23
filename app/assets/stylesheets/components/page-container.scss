@@ -3,6 +3,14 @@
 .page-container {
   @include outer-container;
 
+  padding-left: 25px;
+  padding-right: 25px;
+
+  &.-no-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   &.-with-top-margin {
     margin-top: 50px;
   }
