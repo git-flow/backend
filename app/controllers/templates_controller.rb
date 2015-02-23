@@ -25,6 +25,9 @@ class TemplatesController < ApplicationController
   def update
     @template = Template.find(params[:id])
     @template.update(update_template_params)
+
+    flash[:edit_template] = t('template.edit.success')
+    redirect_to edit_template_path
   end
 
   def render_template

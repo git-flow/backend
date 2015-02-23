@@ -3,6 +3,11 @@
 </div>
 
 <main class="page-container -with-margin">
+  <% if flash[:edit_template] %>
+    <div class="alert alert-success">
+      <%= flash[:edit_template] %>
+    </div>
+  <% end %>
   <div class="panel panel-default">
     <div class="panel-heading">
       <h1 class="panel-title">Edit '<%= @template.name %>' template...</h1>
