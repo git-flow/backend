@@ -111,3 +111,5 @@ en:
   template:
     create:
       use_liquid: "You can use %{liquid} for your templates."
+    edit:
+      success: "Template saved."
