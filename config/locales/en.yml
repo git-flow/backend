@@ -1,4 +1,16 @@
 en:
+  helpers:
+    label:
+      template:
+        name: 'Title'
+        content: 'Template'
+    submit:
+      template:
+        create: 'Create Template'
+    placeholder:
+      template:
+        name: 'Choose a title for this template...'
+        content: 'Write the template you want to use...'
   3rd_party:
     liquid: "Liquid"
     github_project: "GitHub project"
