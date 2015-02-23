@@ -8,8 +8,4 @@ class Template < ActiveRecord::Base
     @template = Liquid::Template.parse(content)
     @template.render(data)
   end
-
-  def render!(data = {})
-    @output = render(data)
-  end
 end
