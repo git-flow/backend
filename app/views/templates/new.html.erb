@@ -2,24 +2,29 @@
   <%= render partial: 'site/header', locals: { skinny: true } %>
 </div>
 
-<main class="page-container -with-top-margin">
+<main class="page-container -with-margin">
   <div class="panel panel-default">
     <div class="panel-heading">
       <h1 class="panel-title">Create a new template...</h1>
     </div>
     <div class="panel-body">
-      <%= form_for @template, url: templates_path, layout: :basic do |f| %>
-        <%= f.text_field :name,
-                         label: 'Title',
-                         placeholder: 'Choose a title for your template...' %>
-        <%= f.text_area :content,
-                        label: 'Template',
-                        placeholder: 'This is the actual template used.',
-                        help: t('template.create.use_liquid', liquid: link_to('Liquid', 'https://github.com/shopify/liquid')).html_safe
-        %>
+      <%= form_for @template, url: templates_path do |f| %>
+        <div class="form-group">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: 'form-control', placeholder: true %>
+        </div>
+        <div class="form-group">
+          <%= f.label :content %>
+          <%= f.text_area :content, class: 'form-control', rows: 20, placeholder: true %>
+          <span class="help-block">
+            <%= t('template.create.use_liquid', liquid: link_to('Liquid', 'https://github.com/shopify/liquid')).html_safe %>
+          </span>
+        </div>
 
-        <%= f.submit %>
+        <%= f.submit class: 'btn btn-lg btn-primary pull-right' %>
       <% end %>
     </div>
   </div>
 </main>
+
+<%= render partial: 'site/footer' %>

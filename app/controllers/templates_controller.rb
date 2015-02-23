@@ -20,18 +20,21 @@ class TemplatesController < ApplicationController
     # If no template was found, we throw a 404
     return render status: :not_found unless @template
 
-    # Render the template itself
-    output = @template.render(render_template_params)
+    begin
+      # Render the template itself
+      @result = @template.render(params[:data])
+      @result.lstrip!
 
-    respond_with({ template: { output: output } },
-                 location: template_path(params[:id]))
+      render json: { template: { result: @result } }
+    rescue Liquid::SyntaxError => syntax_error
+      respond_with do |format|
+        format.html { render text: syntax_error.message, status: :unprocessable_entity }
+        format.json { render json: { errors: [syntax_error.message] } }
+      end
+    end
   end
 
   private
-
-  def render_template_params
-    params.require(:template)
-  end
 
   def create_template_params
     params.require(:template).permit(:name, :content)
