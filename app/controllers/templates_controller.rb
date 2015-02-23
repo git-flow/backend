@@ -2,6 +2,10 @@ class TemplatesController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:render_template]
   respond_to :json, :html
 
+  def index
+    @templates = Template.all
+  end
+
   def new
     @template = Template.new
   end

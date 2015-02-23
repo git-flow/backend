@@ -1,0 +1,20 @@
+<div class="site-top-header">
+  <%= render partial: 'site/header', locals: { skinny: true } %>
+</div>
+
+<main class="page-container -with-margin table-bordered">
+  <table class="table table-striped">
+    <tr>
+      <th>Title</th>
+    </tr>
+    <% @templates.each do |template| %>
+      <tr>
+        <td>
+          <a href="<%= sedit_template_path(template) %>"><%= template.name %></a>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</main>
+
+<%= render partial: 'site/footer' %>
