@@ -15,7 +15,7 @@ class TemplatesController < ApplicationController
     @template.user_id = current_user.id
     @template.save
 
-    respond_with @template
+    respond_with @template, location: edit_template_path(@template)
   end
 
   def render_template
