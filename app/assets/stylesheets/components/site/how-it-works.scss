@@ -8,7 +8,7 @@
 
   > .container > .heading {
     padding: 0 120px;
-    @include element(icon) {
+    > .icon {
       float: left;
       display: inline-block;
       width: 40px;

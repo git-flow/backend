@@ -2,19 +2,30 @@
   <%= render partial: 'site/header', locals: { skinny: true } %>
 </div>
 
-<main class="page-container -with-margin table-bordered">
-  <table class="table table-striped">
-    <tr>
-      <th>Title</th>
-    </tr>
-    <% @templates.each do |template| %>
-      <tr>
-        <td>
-          <a href="<%= edit_template_path(template) %>"><%= template.name %></a>
-        </td>
-      </tr>
-    <% end %>
-  </table>
+<main class="page-container -with-margin">
+  <h1 class="page-header">
+    Your templates
+    <%= link_to 'Create new template', new_template_path, class: 'btn btn-primary pull-right' %>
+  </h1>
+
+  <% @templates.each do |template| %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <%= link_to 'Delete', template_path(template), title: 'Delete this template', class: 'btn btn-danger  btn-xs pull-right' %>
+        <h3 class="panel-title"><%= template.name %></h3>
+      </div>
+      <div class="panel-body">
+        <%= form_for template, data: { track_dirty: true } do |f| %>
+          <div class="form-group">
+            <%= f.text_area :content, rows: 4, class: 'form-control' %>
+          </div>
+
+          <%= f.submit class: 'btn btn-primary pull-right',
+                       data: { show_when_dirty: true } %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
 </main>
 
 <%= render partial: 'site/footer' %>
