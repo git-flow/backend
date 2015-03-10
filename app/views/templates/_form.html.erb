@@ -1,0 +1,15 @@
+<%= form_for @template do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control', placeholder: true %>
+  </div>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_area :content, class: 'form-control', rows: 20, placeholder: true %>
+    <span class="help-block">
+      <%= t('template.create.use_liquid', liquid: link_to('Liquid', 'https://github.com/shopify/liquid')).html_safe %>
+    </span>
+  </div>
+
+  <%= f.submit class: 'btn btn-lg btn-primary pull-right' %>
+<% end %>

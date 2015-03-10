@@ -46,19 +46,20 @@
     margin-top: 90px;
     padding-left: 0;
 
-    .title {
-      font-size: 2.1em;
+    > .title {
+      font-weight: bold;
+      font-size: 32px;
       margin-bottom: 10px;
     }
 
-    .text {
+    > .text {
       margin-top: 0;
-      font-size: 1.4em;
+      font-size: 21px;
     }
 
     @include media($tablet) {
       .text {
-        font-size: 1.2em;
+        font-size: 18px;
       }
 
       @include span-columns(7);
@@ -72,9 +73,13 @@
       margin-top: 50px;
     }
 
+    > .title {
+      font-size: 24px;
+    }
+
     > form > .input {
       border-radius: 4px;
-      font-size: 1.3em;
+      font-size: 18px;
       outline: none;
       border: none;
       padding: 12px 24px;
@@ -90,7 +95,7 @@
     > form > .submit {
       $border-width: 2px;
       border-radius: 4px;
-      font-size: 1.3em;
+      font-size: 18px;
       padding: (12px - $border-width) 24px;
       border: $border-width solid darken($positive, 12%);
       background-color: $positive;
@@ -105,7 +110,7 @@
 
     > .promise {
       display: inline-block;
-      font-size: .8em;
+      font-size: 12px;
       padding-top: 10px;
       color: rgba($white, .8);
     }

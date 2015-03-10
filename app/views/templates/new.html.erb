@@ -1,0 +1,16 @@
+<div class="site-top-header">
+  <%= render partial: 'site/header', locals: { skinny: true } %>
+</div>
+
+<main class="page-container -with-margin">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h1 class="panel-title">Create a new template...</h1>
+    </div>
+    <div class="panel-body">
+      <%= render partial: 'form' %>
+    </div>
+  </div>
+</main>
+
+<%= render partial: 'site/footer' %>

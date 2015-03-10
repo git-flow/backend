@@ -25,10 +25,10 @@
 
       <%= form.submit class: 'button -right' %>
 
+      <%= link_to t('auth.sign_in.forgot_password_link'), new_password_path, class: 'link' %>
       <% if Clearance.configuration.allow_sign_up? %>
         <%= link_to t('auth.sign_in.sign_up_link'), sign_up_path, class: 'link -left-space' %>
       <% end %>
-      <%= link_to t('auth.sign_in.forgot_password_link'), new_password_path, class: 'link' %>
     <% end %>
   </div>
 </div>

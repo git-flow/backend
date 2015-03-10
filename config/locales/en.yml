@@ -1,35 +1,26 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
+  helpers:
+    label:
+      template:
+        name: 'Title'
+        content: 'Template'
+    submit:
+      template:
+        create: 'Create Template'
+    placeholder:
+      template:
+        name: 'Choose a title for this template...'
+        content: 'Write the template you want to use...'
   3rd_party:
     liquid: "Liquid"
-    github_project: "Github project"
+    github_project: "GitHub project"
   auth:
     sign_in:
       title: "Sign into your account"
       button: "Sign in"
       email: "Enter your email address"
       password: "Enter your password"
-      sign_up_link: "No account yet? Sign up now!"
+      sign_up_link: "Sign up"
       forgot_password_link: "Forgot password?"
       invitation_only_text: "Currently, we're still in closed bèta. You can already %{request_an_invitation}."
       request_an_invitation: "request an invitation"
@@ -117,3 +108,8 @@ en:
     gitflow:
       question: "Is Git-Flow really the best workflow for GitHub?"
       answer: "We do think it's a really good workflow. It's very well documented, it works with big teams and is structured even when you just start using it. It might not be the best for everything, although we think that it would also work for smaller projects."
+  template:
+    create:
+      use_liquid: "You can use %{liquid} for your templates."
+    edit:
+      success: "Template saved."
